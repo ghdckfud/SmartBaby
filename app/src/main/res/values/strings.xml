@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SmartBaby</string>
+
+    <string name="connect_success">연결 성공</string>
+    <string name="connect_fail">연결 실패</string>
+    <string name="connect_deny">연결 불가능</string>
+    <string name="connect_lost">연결 해제</string>
+    <string name="BT_Connect">블루투스 연동</string>
+    <string name="Data_Trans">데이터 전송</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@color/colorPrimary"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="left">
+                <ImageButton
+                    android:id="@+id/soundImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/volume" />
+
+                <TextView
+                    android:id="@+id/soundText"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="SOUND"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/background_style"
+                android:layout_height="280dp"
+                android:layout_width="280dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:id="@+id/notice">
+                <ImageView
+                    android:layout_height="190dp"
+                    android:layout_width="190dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/batteryImage"
+                    android:src="@drawable/child"/>
+                <ImageView
+                    android:layout_height="190dp"
+                    android:layout_width="190dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/gameImage"
+                    android:visibility="gone"
+                    android:src="@drawable/child"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    android:text="Hello World"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/gameTitle"
+                    android:gravity="center"
+                    android:textSize="30dp"
+                    android:visibility="gone"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="5dp"
+                    android:text="Hello World"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/batteryTitle"
+                    android:gravity="center"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="right">
+                <ImageButton
+                    android:id="@+id/alarmImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/alarm" />
+
+                <TextView
+                    android:id="@+id/alarmText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="HELP"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fragment"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/soundbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/barstyle"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/barText"
+                    android:text="현재 값 : "
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10pt" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/barOut"
+                    android:textColor="@color/colorWhite"
+                    android:layout_toRightOf="@+id/barText"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textSize="10pt"
+                    android:width="75dip"/>
+                <SeekBar
+                    android:id="@+id/SeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:min="1"
+                    android:max="9"
+                    android:progress="9"
+                    android:thumbTint="@color/colorPink"
+                    android:layout_below="@+id/barOut"/>
+
+            </RelativeLayout>
+        </FrameLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/modeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:text="단어"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/languageText"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:text="한국어"
+                android:layout_gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/modeButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/unmode"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/button_style"/>
+            <TextView
+                android:id="@+id/mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGray"
+                android:text="난이도 설정"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/languageButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/language"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/button_style"/>
+            <TextView
+                android:id="@+id/language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGray"
+                android:text="언어 설정"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/gameButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/game"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/button_style"/>
+
+            <TextView
+                android:id="@+id/game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGray"
+                android:text="게임 하기"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
